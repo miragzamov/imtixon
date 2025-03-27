@@ -1,3 +1,3 @@
 # Imtixon Javoblari
 
-[miragzamov.github.io/imtixon](https://miragzamov.github.io/imtihon)
+[miragzamov.github.io/imtixon](https://miragzamov.github.io/imtixon)

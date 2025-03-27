@@ -5,75 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Imtixon Javoblari</title>
-  <script type="module" src="https://esm.run/@material/web/all.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="theme.css" />
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0"></script>
-  <style>
-    :root {
-      --exam-card-max-width: 420px;
-      --exam-icon-size: 56px;
-      --exam-gap-size: 20px;
-    }
-    
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-      background-color: var(--md-sys-color-background);
-      color: var(--md-sys-color-on-background);
-    }
-    
-    #loadingScreen {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: var(--md-sys-color-background);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--md-sys-color-primary);
-      z-index: 9999;
-      transition: opacity 0.3s ease-out;
-    }
-    
-    .exam-card {
-      max-width: var(--exam-card-max-width);
-      padding: 24px;
-      text-align: center;
-    }
-    
-    .exam-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--exam-gap-size);
-    }
-    
-    .exam-icon {
-      font-size: var(--exam-icon-size);
-      color: var(--md-sys-color-primary);
-    }
-    
-    .exam-title {
-      font-size: 1.8rem;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    
-    .exam-actions {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      margin-top: 16px;
-    }
-  </style>
 </head>
 
 <body>
@@ -111,39 +44,7 @@
     </div>
   </md-dialog>
   
-  <script>
-    window.onload = function() {
-      document.getElementById('loadingScreen').style.opacity = '0';
-      setTimeout(() => {
-        document.getElementById('loadingScreen').style.display = 'none';
-      }, 300);
-    };
-    
-    const infoButton = document.querySelector("#info-button");
-    const infoDialog = document.querySelector("#info-dialog");
-    const infoDialogOkButton = document.querySelector("#info-dialog-ok-button");
-    
-    infoButton.addEventListener("click", () => {
-      infoDialog.show();
-    });
-    
-    infoDialogOkButton.addEventListener("click", () => {
-      infoDialog.close();
-    });
-    
-    const iconElement = document.querySelector(".exam-icon");
-    
-    iconElement.addEventListener("click", launchConfetti);
-    
-    function launchConfetti() {
-      confetti({
-        particleCount: 500,
-        spread: 70,
-        origin: { y: 0.6}
-      });
-    }
-  </script>
-  
+  <script type="module" src="script.js"></script>
 </body>
 
 </html>
